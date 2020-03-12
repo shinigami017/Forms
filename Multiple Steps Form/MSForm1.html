@@ -1,0 +1,63 @@
+<!--Multiple Steps Form-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiple Steps Form</title>
+    <link rel="stylesheet" href="MSForm1.css">
+</head>
+
+<body>
+    <h1 class="tagline">Form with Multiple Steps</h1>
+    <form action="#" method="POST" id="myForm">
+        <h1>Register</h1>
+        <div class="tab">
+            Name:
+            <p><input type="text" name="fname" placeholder="Enter first name" oninput="this.className = ''">
+            </p>
+            <p><input type="text" name="lname" placeholder="Enter last name" oninput="this.className = ''">
+            </p>
+        </div>
+        <div class="tab">
+            Contact info:
+            <p><input type="email" name="email" placeholder="Enter email address" oninput="this.className = ''">
+            </p>
+            <p><input type="number" name="phone" placeholder="Enter phone number" oninput="this.className = ''">
+            </p>
+        </div>
+        <div class="tab">
+            Birthday:
+            <p><input type="number" name="date" placeholder="Enter birth date" oninput="this.className = ''">
+            </p>
+            <p><input type="number" name="month" placeholder="Enter birth month" oninput="this.className = ''">
+            </p>
+            <p><input type="number" name="year" placeholder="Enter birth year" oninput="this.className = ''">
+            </p>
+        </div>
+        <div class="tab">
+            Login info:
+            <p><input type="text" name="username" placeholder="Enter username" oninput="this.className = ''">
+            </p>
+            <p><input type="password" name="password" placeholder="Enter password" oninput="this.className = ''">
+            </p>
+        </div>
+        <div style="overflow: auto;">
+            <div style="float: right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            </div>
+        </div>
+        <div class="tagline">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+    </form>
+    <script src="MSForm1.js"></script>
+</body>
+
+</html>

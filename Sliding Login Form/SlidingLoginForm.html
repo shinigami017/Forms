@@ -1,0 +1,39 @@
+<!-- Sliding Login Form using HTML, CSS and JQuery -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="SlidingLoginForm.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/0d5410235b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="show-login-btn"><i class="fas fa-sign-in-alt"></i> Show Login Form</div>
+    <div class="login-box">
+        <div class="hide-login-btn"><i class="fas fa-times"></i></div>
+        <form action="index.html" method="post" class="login-form">
+            <h1>Login Form</h1>
+            <input type="text" name="username" id="username" class="field" placeholder="Username">
+            <input type="password" name="password" id="password" class="field" placeholder="Password">
+            <input type="submit" value="Login" class="login-btn">
+        </form>
+    </div>
+    <script type="text/javascript">
+        $(".show-login-btn").on("click", function() {
+            $(".login-box").toggleClass("showed");
+        });
+        $(".hide-login-btn").on("click", function() {
+            $(".login-box").toggleClass("showed");
+        });
+    </script>
+</body>
+
+</html>

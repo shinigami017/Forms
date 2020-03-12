@@ -1,0 +1,77 @@
+/* MultiStep Form with Vanilla JS for animation and validation in Bootstrap 4. */
+
+#stepped {
+    transition: all 0.4s ease-in-out;
+}
+
+.fix-height {
+    min-height: 100px;
+}
+
+.steps {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 1;
+}
+
+.steps.active {
+    width: 100%;
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*animation for input fields */
+
+.form-control.invalid {
+    border: 1px solid #ec2626;
+    /* paste any animation you want */
+    animation: shaking 0.82s cubic-bezier(.36, .07, .19, .97)both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shaking {
+    10%,
+    90% {
+        tranform: translate3d(-2px, 0, 0);
+    }
+    20%,
+    80% {
+        tranform: translate3d(4px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        tranform: translate3d(-8px, 0, 0);
+    }
+    40%,
+    60% {
+        tranform: translate3d(8px, 0, 0);
+    }
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .fix-height {
+        min-height: 350px;
+    }
+}
